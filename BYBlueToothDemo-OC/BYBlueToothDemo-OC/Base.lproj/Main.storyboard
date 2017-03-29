@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nTu-0G-tOd">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BYBlueToothDemo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ynO-Ln-OI1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="1cO-ic-kPJ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="UvH-3U-8g0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ynO-Ln-OI1" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="2WW-2X-wAI"/>
+                            <constraint firstItem="ynO-Ln-OI1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="NgL-rU-dD9"/>
+                            <constraint firstItem="ynO-Ln-OI1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w6E-2W-Y8d"/>
+                            <constraint firstItem="ynO-Ln-OI1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zef-1D-uaM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="BYBlueToothDemo" id="iaV-uI-B3S">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="28k-MO-2i0">
+                            <color key="tintColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="reFreshTap:" destination="BYZ-38-t0r" id="HF5-h6-KsO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ynO-Ln-OI1" id="9nd-II-Zz7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975.20000000000005" y="37.331334332833585"/>
+        </scene>
+        <!--Peripheral View Controller-->
+        <scene sceneID="YDd-r4-Jfp">
+            <objects>
+                <viewController storyboardIdentifier="PeripheralViewController" id="Tlz-b5-bD8" customClass="PeripheralViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H5D-Cq-WJg"/>
+                        <viewControllerLayoutGuide type="bottom" id="HJK-O9-8re"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PgK-gM-pcM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp0-is-qOB">
+                                <rect key="frame" x="0.0" y="21" width="320" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9AO-gy-mut"/>
+                                </constraints>
+                                <state key="normal" title="CORS登陆">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4f-JC-6YT">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bZY-Sh-oFw"/>
+                                </constraints>
+                                <state key="normal" title="定位模式切换">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="在此输入发送指令" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ncf-5j-Nkt">
+                                <rect key="frame" x="16" y="111" width="288" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0Ff-9s-y1a"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y85-01-bTD">
+                                <rect key="frame" x="0.0" y="156" width="320" height="412"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z4f-JC-6YT" firstAttribute="width" secondItem="PgK-gM-pcM" secondAttribute="width" id="1NI-g3-OCU"/>
+                            <constraint firstItem="Kp0-is-qOB" firstAttribute="top" secondItem="H5D-Cq-WJg" secondAttribute="bottom" constant="1" id="9ZA-zG-tzb"/>
+                            <constraint firstItem="HJK-O9-8re" firstAttribute="top" secondItem="Y85-01-bTD" secondAttribute="bottom" id="Acj-m0-JSn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ncf-5j-Nkt" secondAttribute="trailing" id="AeE-a6-4rE"/>
+                            <constraint firstItem="Ncf-5j-Nkt" firstAttribute="leading" secondItem="PgK-gM-pcM" secondAttribute="leadingMargin" id="Bg4-hc-o68"/>
+                            <constraint firstItem="Kp0-is-qOB" firstAttribute="width" secondItem="PgK-gM-pcM" secondAttribute="width" id="NPP-Tl-Bt0"/>
+                            <constraint firstItem="Z4f-JC-6YT" firstAttribute="top" secondItem="Kp0-is-qOB" secondAttribute="bottom" constant="1" id="Qmx-Pw-e2Y"/>
+                            <constraint firstItem="Y85-01-bTD" firstAttribute="width" secondItem="PgK-gM-pcM" secondAttribute="width" id="Uw7-HZ-WgD"/>
+                            <constraint firstItem="Ncf-5j-Nkt" firstAttribute="centerX" secondItem="PgK-gM-pcM" secondAttribute="centerX" id="ZvY-xr-vwq"/>
+                            <constraint firstItem="Y85-01-bTD" firstAttribute="top" secondItem="Ncf-5j-Nkt" secondAttribute="bottom" constant="1" id="dH3-Do-NnI"/>
+                            <constraint firstItem="Kp0-is-qOB" firstAttribute="centerX" secondItem="PgK-gM-pcM" secondAttribute="centerX" id="fMP-pO-5st"/>
+                            <constraint firstItem="Y85-01-bTD" firstAttribute="centerX" secondItem="PgK-gM-pcM" secondAttribute="centerX" id="jqJ-JG-tQZ"/>
+                            <constraint firstItem="Ncf-5j-Nkt" firstAttribute="top" secondItem="Z4f-JC-6YT" secondAttribute="bottom" constant="1" id="o4G-YZ-m9n"/>
+                            <constraint firstItem="Z4f-JC-6YT" firstAttribute="centerX" secondItem="PgK-gM-pcM" secondAttribute="centerX" id="zKp-ue-dVN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8bo-jH-eJO">
+                        <barButtonItem key="leftBarButtonItem" title="断开连接" id="tZa-9D-C4g">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancleConnectTap:" destination="Tlz-b5-bD8" id="XEW-la-IYn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="电池电量" id="sJ9-wo-ptX">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nb5-np-XSM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794" y="37"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="crr-7h-eRc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nTu-0G-tOd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bvm-vT-flt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zIA-Pu-Pme"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Png-3h-fJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-22" y="37"/>
+        </scene>
+    </scenes>
+</document>

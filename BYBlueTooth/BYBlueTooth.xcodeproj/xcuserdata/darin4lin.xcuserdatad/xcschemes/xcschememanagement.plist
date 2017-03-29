@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>BYBlueTooth-Universal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>BYBlueTooth.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>202E9E831E84E5FA00193B66</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2050F2CB1E84E41E006724FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>20B542351E84B1D6004022AB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>20B5423E1E84B1D6004022AB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

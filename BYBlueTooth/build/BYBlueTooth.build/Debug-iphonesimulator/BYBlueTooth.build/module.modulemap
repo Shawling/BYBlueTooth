@@ -1,0 +1,6 @@
+framework module BYBlueTooth {
+  umbrella header "BYBlueTooth.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:BYBlueTooth/BYBlueTooth.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BYBlueToothDemo-Swift/BYBlueToothDemo-Swift.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BYBlueToothDemo-OC/BYBlueToothDemo-OC.xcodeproj">
+   </FileRef>
+</Workspace>
