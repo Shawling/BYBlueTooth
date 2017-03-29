@@ -104,6 +104,9 @@
 	if(byCallBack.blockOnReadValueForCharacteristic[key]) {
 		[byCallBack.blockOnReadValueForCharacteristic removeObjectForKey:key];
 	}
+	[byCallBack setFilterOnDiscoverPeripherals:nil];
+	[byCallBack setFilterForServiceName:nil];
+	[byCallBack setFilterForReadCharacteristicName:nil];
 }
 
 
@@ -123,6 +126,15 @@
  */
 - (void)setFilterForServiceName:(BOOL (^)(NSString *serviceName))filter {
 	[byCallBack setFilterForServiceName:filter];
+}
+
+#pragma mark - 指定用于读取数据的Characteristic名称
+
+/**
+ 指定用于读取数据的Characteristic名称
+ */
+- (void)setFilterForCharacteristicName:(BOOL (^)(NSString *characteristicName))filter {
+	[byCallBack setFilterForReadCharacteristicName:filter];
 }
 
 

@@ -21,15 +21,21 @@
 	[self setTitle:_currPeripheral.name];
 	
 	//开始连接设备
-	[SVProgressHUD showInfoWithStatus:@"开始连接设备"];
-	[self babyDelegate];
-	//设置超时10秒，10秒后没有连接成功则断开
-	bb.having(_currPeripheral).enjoy().begin().stop(10);
+	[SVProgressHUD showWithStatus:@"开始连接设备"];
+	//连接设备
+	[self reConnectPeripheral];
 }
 
 //页面销毁后必须调用removeBlockWithKey移除蓝牙委托
 - (void)dealloc {
 	[bb removeBlockWithKey:CLASS_KEY];
+}
+
+//连接设备
+-(void)reConnectPeripheral {
+	[self babyDelegate];
+	//设置超时10秒，10秒后没有连接成功则断开
+	bb.having(_currPeripheral).enjoy().begin().stop(10);
 }
 
 -(void)babyDelegate {
@@ -42,7 +48,6 @@
 	
 	//设置重新连接，也是在断开连接委托中，如果有错误信息，可以判断出不是手动断开连接
 	[bb setBlockOnDisconnectWithKey:CLASS_KEY block:^(CBCentralManager *central, CBPeripheral *peripheral, NSError *error) {
-		__typeof__(self) strongSelf = weakSelf;
 		NSString *str;
 		
 		if(error) {
@@ -51,16 +56,18 @@
 			[SVProgressHUD showWithStatus:str];
 			
 			//重新连接
-			//需要重新设置委托
-			[weakSelf babyDelegate];
-			//设置超时10秒，10秒后没有连接成功则断开
-			strongSelf->bb.having([strongSelf currPeripheral]).enjoy().begin().stop(10);
+			[weakSelf reConnectPeripheral];
 		} else {
 			//手动断开，自行处理
 			str = [NSString stringWithFormat:@"%@断开连接", [peripheral name]];
 			[SVProgressHUD showInfoWithStatus:str];
 			[weakSelf.navigationController popViewControllerAnimated:YES];
 		}
+	}];
+	
+	//设置指定的Service名称
+	[bb setFilterForServiceName:^BOOL(NSString *serviceName) {
+		return YES;
 	}];
 }
 

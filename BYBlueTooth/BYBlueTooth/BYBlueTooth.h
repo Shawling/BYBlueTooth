@@ -19,7 +19,7 @@
 - (void)setBlockOnCentralManagerDidUpdateStateWithKey:(NSString *)key block:(void (^)(CBCentralManager *central))block;
 
 /**
- 找到Peripherals的block |  when find peripheral
+ 找到符合setFilterOnDiscoverPeripherals规则的Peripherals的block |  when find peripheral
  */
 - (void)setBlockOnDiscoverToPeripheralsWithKey:(NSString *)key block:(void (^)(CBCentralManager *central,CBPeripheral *peripheral,NSDictionary *advertisementData, NSNumber *RSSI))block;
 
@@ -79,6 +79,13 @@
  设置指定的Service名称
  */
 - (void)setFilterForServiceName:(BOOL (^)(NSString *serviceName))filter;
+
+#pragma mark - 指定用于读取数据的Characteristic名称
+
+/**
+ 指定用于读取数据的Characteristic名称
+ */
+- (void)setFilterForCharacteristicName:(BOOL (^)(NSString *characteristicName))filter;
 
 
 #pragma mark - 链式函数

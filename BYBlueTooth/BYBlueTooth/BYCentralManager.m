@@ -102,7 +102,7 @@
 
 //扫描到Peripherals
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI {
-
+	
 	if ([self addDiscoverPeripheral:peripheral]) {
 		BYLog(@">>>扫描到设备:%@",peripheral.name);
 		//扫描到设备callback
@@ -112,6 +112,12 @@
 					for (NSString *key in byCallBack.blockOnDiscoverPeripherals) {
 						byCallBack.blockOnDiscoverPeripherals[key](central,peripheral,advertisementData,RSSI);
 					}
+				}
+			}
+		} else {
+			if ([byCallBack blockOnDiscoverPeripherals]) {
+				for (NSString *key in byCallBack.blockOnDiscoverPeripherals) {
+					byCallBack.blockOnDiscoverPeripherals[key](central,peripheral,advertisementData,RSSI);
 				}
 			}
 		}
@@ -144,7 +150,7 @@
 //连接到Peripherals-失败
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
 	BYLog(@">>>连接到名称为（%@）的设备-失败,原因:%@",[peripheral name],[error localizedDescription]);
-
+	
 	//扫描到设备callback
 	if ([byCallBack blockOnFailToConnect]) {
 		for (NSString *key in byCallBack.blockOnFailToConnect) {
@@ -164,6 +170,70 @@
 	if ([byCallBack blockOnDisconnect]) {
 		for (NSString *key in byCallBack.blockOnDisconnect) {
 			byCallBack.blockOnDisconnect[key](central,peripheral,error);
+		}
+	}
+}
+
+//扫描到服务
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
+	
+	BYLog(@">>>扫描到服务：%@",peripheral.services);
+	if (error) {
+		BYLog(@">>>didDiscoverServices for %@ with error: %@", peripheral.name, [error localizedDescription]);
+	}
+	
+	//回叫block
+	if ([byCallBack blockOnDiscoverServices]) {
+		for (NSString *key in byCallBack.blockOnDiscoverServices) {
+			byCallBack.blockOnDiscoverServices[key](peripheral,error);
+		}
+	}
+	
+	//discover characteristics
+	if (needDiscoverCharacteristics) {
+		//如果设置了characteristics所在的service
+		if ([byCallBack filterForServiceName]) {
+			for (CBService *service in peripheral.services) {
+				if ([byCallBack filterForServiceName](service.UUID.UUIDString)) {
+					[peripheral discoverCharacteristics:nil forService:service];
+				}
+			}
+		} else {
+			for (CBService *service in peripheral.services) {
+				[peripheral discoverCharacteristics:nil forService:service];
+			}
+		}
+	}
+}
+
+//发现服务的Characteristics
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
+	
+	BYLog(@">>>扫描到服务%@的Characteristics：%@", service.UUID, service.characteristics);
+	if (error) {
+		BYLog(@"error didDiscoverCharacteristicsForService for %@ with error: %@", service.UUID, [error localizedDescription]);
+		//        return;
+	}
+	//回叫block
+	if ([byCallBack blockOnDiscoverCharacteristics]) {
+		for (NSString *key in byCallBack.blockOnDiscoverCharacteristics) {
+			byCallBack.blockOnDiscoverCharacteristics[key](peripheral,service,error);
+		}
+	}
+	
+	//如果需要更新Characteristic的值
+	if (needReadValueForCharacteristic) {
+		//如果设置了读取数据characteristics的名称
+		if ([byCallBack filterForReadCharacteristicName]) {
+			for (CBCharacteristic *characteristic in service.characteristics) {
+				if ([byCallBack filterForReadCharacteristicName](characteristic.UUID.UUIDString)) {
+					[peripheral readValueForCharacteristic:characteristic];
+				}
+			}
+		} else {
+			for (CBCharacteristic *characteristic in service.characteristics) {
+				[peripheral readValueForCharacteristic:characteristic];
+			}
 		}
 	}
 }

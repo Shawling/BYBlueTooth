@@ -49,10 +49,12 @@ typedef void (^BYReadValueForCharacteristicBlock)(CBPeripheral *peripheral,CBCha
 @property (nonatomic, copy) NSMutableDictionary<NSString *, BYReadValueForCharacteristicBlock>* blockOnReadValueForCharacteristic;
 
 
-#pragma mark - 过滤器Filter
+#pragma mark - 工具方法
 //发现peripherals规则
 @property (nonatomic, copy) BOOL (^filterOnDiscoverPeripherals)(NSString *peripheralName, NSDictionary *advertisementData, NSNumber *RSSI);
 //设置指定的Service名称
 @property (nonatomic, copy) BOOL (^filterForServiceName)(NSString *serviceName);
+//设置指定的Characteristic名称
+@property (nonatomic, copy) BOOL (^filterForReadCharacteristicName)(NSString *characteristicName);
 
 @end
