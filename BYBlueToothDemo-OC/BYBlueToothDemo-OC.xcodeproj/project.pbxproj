@@ -152,7 +152,7 @@
 				TargetAttributes = {
 					2050F27E1E84C584006724FF = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 3TX6VY5ALW;
+						DevelopmentTeam = 6JS3V5L3W2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -319,7 +319,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3TX6VY5ALW;
+				DEVELOPMENT_TEAM = 6JS3V5L3W2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BYBlueToothDemo-OC",
+				);
 				INFOPLIST_FILE = "BYBlueToothDemo-OC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -332,7 +336,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3TX6VY5ALW;
+				DEVELOPMENT_TEAM = 6JS3V5L3W2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BYBlueToothDemo-OC",
+				);
 				INFOPLIST_FILE = "BYBlueToothDemo-OC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

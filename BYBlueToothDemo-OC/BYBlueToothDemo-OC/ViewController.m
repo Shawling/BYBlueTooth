@@ -22,6 +22,9 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+	//设置BYBlueTooth是否打印Log
+	[BYBlueTooth isShowLog:NO];
+	
 	peripheralArray = [[NSMutableArray alloc]init];
 	
 	bb = [BYBlueTooth shareBYBlueTooth];
@@ -60,19 +63,23 @@
 		}
 	}];
 	
-	//设置查找设备的过滤器
-	[bb setFilterOnDiscoverPeripherals:^BOOL(NSString *peripheralName, NSDictionary *advertisementData, NSNumber *RSSI) {
-		//设置查找规则是名称大于0
-		if (peripheralName.length >0) {
-			return YES;
-		}
-		return NO;
-	}];
+//	//设置查找设备的过滤器
+//	[bb setFilterOnDiscoverPeripherals:^BOOL(NSString *peripheralName, NSDictionary *advertisementData, NSNumber *RSSI) {
+//		//设置查找规则是名称大于0
+//		if (peripheralName.length >0) {
+//			return YES;
+//		}
+//		return NO;
+//	}];
 	
 	//设置扫描到设备的委托
 	[bb setBlockOnDiscoverToPeripheralsWithKey:CLASS_KEY block:^(CBCentralManager *central, CBPeripheral *peripheral, NSDictionary *advertisementData, NSNumber *RSSI) {
 		[weakSelf insertTableView:peripheral advertisementData:advertisementData RSSI:RSSI];
 	}];
+    
+//    [bb setBlockOnOutOfTimeWithKey:CLASS_KEY block:^{
+//        [SVProgressHUD showErrorWithStatus:@"检查蓝牙"];
+//    }];
 }
 
 - (IBAction)reFreshTap:(UIBarButtonItem *)sender {
@@ -87,7 +94,7 @@
 	//设置蓝牙委托
 	[self babyDelegate];
 	//开始扫描
-	bb.scanForPeripherals().begin();
+    bb.scanForPeripheralsWithService(@"6E400001-B5A3-F393-E0A9-E50E24DCCA9E").begin().stop(20);
 }
 
 #pragma mark -UIViewController 方法

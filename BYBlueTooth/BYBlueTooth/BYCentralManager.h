@@ -10,6 +10,8 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "BYDefine.h"
 #import "BYCallBack.h"
+#import "BYTools.h"
+
 
 @interface BYCentralManager : NSObject<CBCentralManagerDelegate, CBPeripheralDelegate> {
 	
@@ -22,6 +24,8 @@
 	BOOL needReadValueForCharacteristic;//是否获取（更新）Characteristics的值
 	//是否一次性处理
 	BOOL oneReadValueForCharacteristicValue;
+    
+    NSArray<NSString *> *needSearchService;
 	
 	//方法执行时间
 	int executeTime;
@@ -30,7 +34,7 @@
 	NSTimer *connectTimer;
 	
 	//主设备
-	CBCentralManager *centralManager;
+//	CBCentralManager *centralManager;
 	
 	//保存串行方法参数，可以在蓝牙运行时配置begin模式，而不干扰已在运行的串行方法参数
 	NSMutableDictionary *pocket;
@@ -40,6 +44,9 @@
 	//已经连接的设备
 	CBPeripheral *connectedPeripheral;
 	
+	//用于写入数据的Characteristic
+	CBCharacteristic *writeCharacteristic;
+	
 	//回调方法
 	BYCallBack* byCallBack;
 
@@ -47,7 +54,13 @@
 	NSMutableArray *discoverPeripherals;
 	//需要自动重连的外设
 	NSMutableArray *reConnectPeripherals;
+	
+	//已缓存的终端信息
+	NSMutableString *cachedZDXX;
 }
+
+//主设备
+@property (strong, nonatomic) CBCentralManager *centralManager;
 
 //扫描Peripherals
 - (void)scanPeripherals;

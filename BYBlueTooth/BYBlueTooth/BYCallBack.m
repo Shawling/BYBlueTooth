@@ -21,6 +21,8 @@
 		_blockOnDiscoverServices = [[NSMutableDictionary alloc] init];
 		_blockOnDiscoverCharacteristics = [[NSMutableDictionary alloc] init];
 		_blockOnReadValueForCharacteristic = [[NSMutableDictionary alloc] init];
+        _blocksOnOpenBLEOutOfTime = [[NSMutableDictionary alloc] init];
+        _blocksOnConnectOutOfTime = [[NSMutableDictionary alloc] init];
 	}
 	return self;
 }

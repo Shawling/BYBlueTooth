@@ -27,6 +27,9 @@ typedef void (^BYDiscoverCharacteristicsBlock)(CBPeripheral *peripheral,CBServic
 //更新（获取）Characteristics的value的block
 typedef void (^BYReadValueForCharacteristicBlock)(CBPeripheral *peripheral,CBCharacteristic *characteristic,NSError *error);
 
+typedef void (^BYOpenBLEOutOfTimeBlock)();
+typedef void (^BYConnectOutOfTimeBlock)();
+
 @interface BYCallBack : NSObject
 
 
@@ -47,6 +50,10 @@ typedef void (^BYReadValueForCharacteristicBlock)(CBPeripheral *peripheral,CBCha
 @property (nonatomic, copy) NSMutableDictionary<NSString *, BYDiscoverCharacteristicsBlock>* blockOnDiscoverCharacteristics;
 //更新Characteristics的value
 @property (nonatomic, copy) NSMutableDictionary<NSString *, BYReadValueForCharacteristicBlock>* blockOnReadValueForCharacteristic;
+//打开蓝牙超时的Block
+@property (nonatomic, copy) NSMutableDictionary<NSString *, BYOpenBLEOutOfTimeBlock>* blocksOnOpenBLEOutOfTime;
+//连接超时的Block
+@property (nonatomic, copy) NSMutableDictionary<NSString *, BYConnectOutOfTimeBlock>* blocksOnConnectOutOfTime;
 
 
 #pragma mark - 工具方法
@@ -54,7 +61,9 @@ typedef void (^BYReadValueForCharacteristicBlock)(CBPeripheral *peripheral,CBCha
 @property (nonatomic, copy) BOOL (^filterOnDiscoverPeripherals)(NSString *peripheralName, NSDictionary *advertisementData, NSNumber *RSSI);
 //设置指定的Service名称
 @property (nonatomic, copy) BOOL (^filterForServiceName)(NSString *serviceName);
-//设置指定的Characteristic名称
+//设置指定读取数据的Characteristic名称
 @property (nonatomic, copy) BOOL (^filterForReadCharacteristicName)(NSString *characteristicName);
+//设置指定写入数据的Characteristic名称
+@property (nonatomic, copy) BOOL (^filterForWriteCharacteristicName)(NSString *characteristicName);
 
 @end

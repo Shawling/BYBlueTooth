@@ -15,7 +15,8 @@
 		2050F2AB1E84C5AF006724FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2050F2A91E84C5AF006724FF /* Main.storyboard */; };
 		2050F2AD1E84C5AF006724FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2050F2AC1E84C5AF006724FF /* Assets.xcassets */; };
 		2050F2B01E84C5AF006724FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2050F2AE1E84C5AF006724FF /* LaunchScreen.storyboard */; };
-		2050F2C51E84C76C006724FF /* BYBlueTooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2050F2C41E84C76C006724FF /* BYBlueTooth.framework */; };
+		209178E41E9C8CB800A97235 /* BYBlueTooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209178E31E9C8CB800A97235 /* BYBlueTooth.framework */; };
+		209178E61E9C8D3800A97235 /* PeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209178E51E9C8D3800A97235 /* PeripheralViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		2050F2AF1E84C5AF006724FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2050F2B11E84C5AF006724FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2050F2C41E84C76C006724FF /* BYBlueTooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BYBlueTooth.framework; path = "../BYBlueTooth/build/Debug-iphoneos/BYBlueTooth.framework"; sourceTree = "<group>"; };
+		209178E31E9C8CB800A97235 /* BYBlueTooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BYBlueTooth.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/BYBlueTooth-fxklbpqvpaascwgeyplgsslimpce/Build/Products/Debug-iphoneos/BYBlueTooth.framework"; sourceTree = "<group>"; };
+		209178E51E9C8D3800A97235 /* PeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2050F2C51E84C76C006724FF /* BYBlueTooth.framework in Frameworks */,
+				209178E41E9C8CB800A97235 /* BYBlueTooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 			children = (
 				2050F2A51E84C5AF006724FF /* AppDelegate.swift */,
 				2050F2A71E84C5AF006724FF /* ViewController.swift */,
+				209178E51E9C8D3800A97235 /* PeripheralViewController.swift */,
 				2050F2A91E84C5AF006724FF /* Main.storyboard */,
 				2050F2AC1E84C5AF006724FF /* Assets.xcassets */,
 				2050F2AE1E84C5AF006724FF /* LaunchScreen.storyboard */,
@@ -92,6 +96,7 @@
 		2050F2C31E84C76C006724FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				209178E31E9C8CB800A97235 /* BYBlueTooth.framework */,
 				2050F2C41E84C76C006724FF /* BYBlueTooth.framework */,
 			);
 			name = Frameworks;
@@ -129,7 +134,7 @@
 				TargetAttributes = {
 					2050F2A11E84C5AF006724FF = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 3TX6VY5ALW;
+						DevelopmentTeam = 6JS3V5L3W2;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -172,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209178E61E9C8D3800A97235 /* PeripheralViewController.swift in Sources */,
 				2050F2A81E84C5AF006724FF /* ViewController.swift in Sources */,
 				20115EEB1E89FB3E0063E7B8 /* SVProgressHUD.m in Sources */,
 				2050F2A61E84C5AF006724FF /* AppDelegate.swift in Sources */,
@@ -299,7 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 3TX6VY5ALW;
+				DEVELOPMENT_TEAM = 6JS3V5L3W2;
 				INFOPLIST_FILE = "BYBlueToothDemo-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -316,7 +322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 3TX6VY5ALW;
+				DEVELOPMENT_TEAM = 6JS3V5L3W2;
 				INFOPLIST_FILE = "BYBlueToothDemo-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

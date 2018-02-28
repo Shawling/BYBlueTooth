@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BYBlueTooth-Package.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>BYBlueTooth-Universal.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>2050F2CB1E84E41E006724FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>209178E71E9CBE1800A97235</key>
 		<dict>
 			<key>primary</key>
 			<true/>

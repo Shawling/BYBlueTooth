@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>BYBlueTooth Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">BYBlueTooth </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">ACME</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/isShowLog:">+ isShowLog:</option>
+		
+		<option value="//api/name/shareBYBlueTooth">+ shareBYBlueTooth</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/begin">- begin</option>
+		
+		<option value="//api/name/cancelPeripheralConnection:">- cancelPeripheralConnection:</option>
+		
+		<option value="//api/name/cancelScan">- cancelScan</option>
+		
+		<option value="//api/name/corsLoginWithip:port:user:password:mount:">- corsLoginWithip:port:user:password:mount:</option>
+		
+		<option value="//api/name/enjoy">- enjoy</option>
+		
+		<option value="//api/name/having">- having</option>
+		
+		<option value="//api/name/removeBlockWithKey:">- removeBlockWithKey:</option>
+		
+		<option value="//api/name/scanForPeripherals">- scanForPeripherals</option>
+		
+		<option value="//api/name/setBlockOnCentralManagerDidUpdateStateWithKey:block:">- setBlockOnCentralManagerDidUpdateStateWithKey:block:</option>
+		
+		<option value="//api/name/setBlockOnConnectedWithKey:block:">- setBlockOnConnectedWithKey:block:</option>
+		
+		<option value="//api/name/setBlockOnDisconnectWithKey:block:">- setBlockOnDisconnectWithKey:block:</option>
+		
+		<option value="//api/name/setBlockOnDiscoverCharacteristicsWithKey:block:">- setBlockOnDiscoverCharacteristicsWithKey:block:</option>
+		
+		<option value="//api/name/setBlockOnDiscoverServicesWithKey:block:">- setBlockOnDiscoverServicesWithKey:block:</option>
+		
+		<option value="//api/name/setBlockOnDiscoverToPeripheralsWithKey:block:">- setBlockOnDiscoverToPeripheralsWithKey:block:</option>
+		
+		<option value="//api/name/setBlockOnFailToConnectWithKey:block:">- setBlockOnFailToConnectWithKey:block:</option>
+		
+		<option value="//api/name/setBlockOnReadCompleteValueWithKey:block:">- setBlockOnReadCompleteValueWithKey:block:</option>
+		
+		<option value="//api/name/setBlockOnReadGGAValueWithKey:block:">- setBlockOnReadGGAValueWithKey:block:</option>
+		
+		<option value="//api/name/setBlockOnReadValueForCharacteristicWithKey:block:">- setBlockOnReadValueForCharacteristicWithKey:block:</option>
+		
+		<option value="//api/name/setFilterForReadCharacteristicName:">- setFilterForReadCharacteristicName:</option>
+		
+		<option value="//api/name/setFilterForServiceName:">- setFilterForServiceName:</option>
+		
+		<option value="//api/name/setFilterForWriteCharacteristicName:">- setFilterForWriteCharacteristicName:</option>
+		
+		<option value="//api/name/setFilterOnDiscoverPeripherals:">- setFilterOnDiscoverPeripherals:</option>
+		
+		<option value="//api/name/stop">- stop</option>
+		
+		<option value="//api/name/writeToPeripheralWithASCIIString:">- writeToPeripheralWithASCIIString:</option>
+		
+		<option value="//api/name/writeToPeripheralWithHEXString:">- writeToPeripheralWithHEXString:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">BYBlueTooth Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>BYBlueTooth.h<br />BYBlueTooth.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/setBlockOnCentralManagerDidUpdateStateWithKey:block:" title="setBlockOnCentralManagerDidUpdateStateWithKey:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setBlockOnCentralManagerDidUpdateStateWithKey:block:">&ndash;&nbsp;setBlockOnCentralManagerDidUpdateStateWithKey:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设备状态改变的block |  when CentralManager state changed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setBlockOnCentralManagerDidUpdateStateWithKey:(NSString *)<em>key</em> block:(void ( ^ ) ( CBCentralManager *central ))<em>block</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setBlockOnDiscoverToPeripheralsWithKey:block:" title="setBlockOnDiscoverToPeripheralsWithKey:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setBlockOnDiscoverToPeripheralsWithKey:block:">&ndash;&nbsp;setBlockOnDiscoverToPeripheralsWithKey:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>找到符合setFilterOnDiscoverPeripherals规则的Peripherals的block |  when find peripheral</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setBlockOnDiscoverToPeripheralsWithKey:(NSString *)<em>key</em> block:(void ( ^ ) ( CBCentralManager *central , CBPeripheral *peripheral , NSDictionary *advertisementData , NSNumber *RSSI ))<em>block</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setBlockOnConnectedWithKey:block:" title="setBlockOnConnectedWithKey:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setBlockOnConnectedWithKey:block:">&ndash;&nbsp;setBlockOnConnectedWithKey:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>连接Peripherals成功的block
+|  when connected peripheral</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setBlockOnConnectedWithKey:(NSString *)<em>key</em> block:(void ( ^ ) ( CBCentralManager *central , CBPeripheral *peripheral ))<em>block</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setBlockOnFailToConnectWithKey:block:" title="setBlockOnFailToConnectWithKey:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setBlockOnFailToConnectWithKey:block:">&ndash;&nbsp;setBlockOnFailToConnectWithKey:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>连接Peripherals失败的block
+|  when fail to connect peripheral</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setBlockOnFailToConnectWithKey:(NSString *)<em>key</em> block:(void ( ^ ) ( CBCentralManager *central , CBPeripheral *peripheral , NSError *error ))<em>block</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setBlockOnDisconnectWithKey:block:" title="setBlockOnDisconnectWithKey:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setBlockOnDisconnectWithKey:block:">&ndash;&nbsp;setBlockOnDisconnectWithKey:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>断开Peripherals的连接的block
+|  when disconnected peripheral</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setBlockOnDisconnectWithKey:(NSString *)<em>key</em> block:(void ( ^ ) ( CBCentralManager *central , CBPeripheral *peripheral , NSError *error ))<em>block</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setBlockOnDiscoverServicesWithKey:block:" title="setBlockOnDiscoverServicesWithKey:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setBlockOnDiscoverServicesWithKey:block:">&ndash;&nbsp;setBlockOnDiscoverServicesWithKey:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置查找服务的block
+|  when discover services of peripheral</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setBlockOnDiscoverServicesWithKey:(NSString *)<em>key</em> block:(void ( ^ ) ( CBPeripheral *peripheral , NSError *error ))<em>block</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setBlockOnDiscoverCharacteristicsWithKey:block:" title="setBlockOnDiscoverCharacteristicsWithKey:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setBlockOnDiscoverCharacteristicsWithKey:block:">&ndash;&nbsp;setBlockOnDiscoverCharacteristicsWithKey:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置查找到Characteristics的block
+|  when discovered Characteristics</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setBlockOnDiscoverCharacteristicsWithKey:(NSString *)<em>key</em> block:(void ( ^ ) ( CBPeripheral *peripheral , CBService *service , NSError *error ))<em>block</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setBlockOnReadValueForCharacteristicWithKey:block:" title="setBlockOnReadValueForCharacteristicWithKey:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setBlockOnReadValueForCharacteristicWithKey:block:">&ndash;&nbsp;setBlockOnReadValueForCharacteristicWithKey:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置获取到最新Characteristics值的block
+|  when read new characteristics value  or notiy a characteristics value</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setBlockOnReadValueForCharacteristicWithKey:(NSString *)<em>key</em> block:(void ( ^ ) ( CBPeripheral *peripheral , CBCharacteristic *characteristic , NSError *error ))<em>block</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setBlockOnReadCompleteValueWithKey:block:" title="setBlockOnReadCompleteValueWithKey:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setBlockOnReadCompleteValueWithKey:block:">&ndash;&nbsp;setBlockOnReadCompleteValueWithKey:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置获取到完整数据的Block，完整数据不包含$，*，校验和以及结束符<CR><LF></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setBlockOnReadCompleteValueWithKey:(NSString *)<em>key</em> block:(void ( ^ ) ( ))<em>block</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setBlockOnReadGGAValueWithKey:block:" title="setBlockOnReadGGAValueWithKey:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setBlockOnReadGGAValueWithKey:block:">&ndash;&nbsp;setBlockOnReadGGAValueWithKey:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置获取到GGA定位数据的Block</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setBlockOnReadGGAValueWithKey:(NSString *)<em>key</em> block:(void ( ^ ) ( BYLocationModel *value ))<em>block</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeBlockWithKey:" title="removeBlockWithKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeBlockWithKey:">&ndash;&nbsp;removeBlockWithKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>移除所有与key相关的block</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeBlockWithKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setFilterOnDiscoverPeripherals:" title="setFilterOnDiscoverPeripherals:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setFilterOnDiscoverPeripherals:">&ndash;&nbsp;setFilterOnDiscoverPeripherals:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置查找Peripherals的规则
+|  filter of discover peripherals</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setFilterOnDiscoverPeripherals:(BOOL ( ^ ) ( NSString *peripheralName , NSDictionary *advertisementData , NSNumber *RSSI ))<em>filter</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setFilterForServiceName:" title="setFilterForServiceName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setFilterForServiceName:">&ndash;&nbsp;setFilterForServiceName:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置指定的Service名称</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setFilterForServiceName:(BOOL ( ^ ) ( NSString *serviceName ))<em>filter</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setFilterForReadCharacteristicName:" title="setFilterForReadCharacteristicName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setFilterForReadCharacteristicName:">&ndash;&nbsp;setFilterForReadCharacteristicName:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>指定用于读取数据的Characteristic名称</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setFilterForReadCharacteristicName:(BOOL ( ^ ) ( NSString *characteristicName ))<em>filter</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setFilterForWriteCharacteristicName:" title="setFilterForWriteCharacteristicName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setFilterForWriteCharacteristicName:">&ndash;&nbsp;setFilterForWriteCharacteristicName:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>指定用于写入数据的Characteristic名称</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setFilterForWriteCharacteristicName:(BOOL ( ^ ) ( NSString *characteristicName ))<em>filter</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/scanForPeripherals" title="scanForPeripherals"></a>
+	<h3 class="method-title"><code><a href="#//api/name/scanForPeripherals">&ndash;&nbsp;scanForPeripherals</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>查找Peripherals</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BYBlueTooth *( ^ ) ( ))scanForPeripherals</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/begin" title="begin"></a>
+	<h3 class="method-title"><code><a href="#//api/name/begin">&ndash;&nbsp;begin</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>开始执行</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BYBlueTooth *( ^ ) ( ))begin</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stop" title="stop"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stop">&ndash;&nbsp;stop</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>sec秒后没有连接成功则断开</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BYBlueTooth *( ^ ) ( int sec ))stop</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/having" title="having"></a>
+	<h3 class="method-title"><code><a href="#//api/name/having">&ndash;&nbsp;having</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>持有对象</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BYBlueTooth *( ^ ) ( id obj ))having</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/enjoy" title="enjoy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enjoy">&ndash;&nbsp;enjoy</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>enjoy 完成一整套蓝牙流程，调用此方法前前面必须有scanForPeripherals或having方法，之后再调用begin方法，祝你使用愉快</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BYBlueTooth *( ^ ) ( ))enjoy</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isShowLog:" title="isShowLog:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isShowLog:">+&nbsp;isShowLog:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>是否显示Log</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)isShowLog:(BOOL)<em>isShowLog</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shareBYBlueTooth" title="shareBYBlueTooth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shareBYBlueTooth">+&nbsp;shareBYBlueTooth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>单例构造方法</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)shareBYBlueTooth</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BabyBluetooth共享实例</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelPeripheralConnection:" title="cancelPeripheralConnection:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelPeripheralConnection:">&ndash;&nbsp;cancelPeripheralConnection:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>断开连接</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelPeripheralConnection:(CBPeripheral *)<em>peripheral</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelScan" title="cancelScan"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelScan">&ndash;&nbsp;cancelScan</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>停止扫描</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelScan</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/writeToPeripheralWithASCIIString:" title="writeToPeripheralWithASCIIString:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/writeToPeripheralWithASCIIString:">&ndash;&nbsp;writeToPeripheralWithASCIIString:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>向Characteristic写入数据，格式为ASCII</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)writeToPeripheralWithASCIIString:(NSString *)<em>string</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/writeToPeripheralWithHEXString:" title="writeToPeripheralWithHEXString:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/writeToPeripheralWithHEXString:">&ndash;&nbsp;writeToPeripheralWithHEXString:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>向Characteristic写入数据，格式为HEX</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)writeToPeripheralWithHEXString:(NSString *)<em>string</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/corsLoginWithip:port:user:password:mount:" title="corsLoginWithip:port:user:password:mount:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/corsLoginWithip:port:user:password:mount:">&ndash;&nbsp;corsLoginWithip:port:user:password:mount:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>使用地址，端口号，用户名，密码，挂接点进行cors登录</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)corsLoginWithip:(NSString *)<em>ip</em> port:(NSString *)<em>port</em> user:(NSString *)<em>user</em> password:(NSString *)<em>password</em> mount:(NSString *)<em>mount</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BYBlueTooth.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 ACME. All rights reserved. Updated: 2017-04-10</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

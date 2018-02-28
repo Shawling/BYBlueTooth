@@ -11,9 +11,12 @@ import BYBlueTooth
 
 class ViewController: UIViewController {
 	let bb = BYBlueTooth.share()
-
+	var currPeripheral: CBPeripheral?
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		BYBlueTooth.isShowLog(true)
+		
+		_ = bb?.scanForPeripheralsWithService()(nil)?.begin()()
 	}
 
 	override func didReceiveMemoryWarning() {

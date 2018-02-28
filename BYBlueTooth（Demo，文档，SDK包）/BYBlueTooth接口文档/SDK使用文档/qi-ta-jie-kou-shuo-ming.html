@@ -1,0 +1,294 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>其他接口说明 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="blocksshe-zhi.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">SDK接口使用说明</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="huo-qu-bybluetooth-dan-li.html">
+            
+                <a href="huo-qu-bybluetooth-dan-li.html">
+            
+                    
+                    基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="blocksshe-zhi.html">
+            
+                <a href="blocksshe-zhi.html">
+            
+                    
+                    Blocks设置说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="qi-ta-jie-kou-shuo-ming.html">
+            
+                <a href="qi-ta-jie-kou-shuo-ming.html">
+            
+                    
+                    其他接口说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >其他接口说明</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5176;&#x4ED6;&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x5176;&#x4ED6;&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h1>
+<hr>
+<h4 id="&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x663E;&#x793A;sdk&#x7684;&#x6253;&#x5370;&#x4FE1;&#x606F;&#xFF1A;">&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x663E;&#x793A;SDK&#x7684;&#x6253;&#x5370;&#x4FE1;&#x606F;&#xFF1A;</h4>
+<p>YES&#x4E3A;&#x6253;&#x5370;&#xFF0C;NO&#x4E3A;&#x4E0D;&#x6253;&#x5370;</p>
+<pre><code>//OC
+[BYBlueTooth isShowLog:YES];
+//Swift
+BYBlueTooth.isShowLog(true)
+</code></pre><h4 id=""> </h4>
+<h4 id="&#x65AD;&#x5F00;&#x4E0E;cbperipheral&#x7684;&#x8FDE;&#x63A5;&#xFF08;&#x9700;&#x8981;&#x5728;&#x8FDE;&#x63A5;&#x5230;cbperipheral&#x540E;&#x6301;&#x6709;&#x8BE5;&#x5BF9;&#x8C61;&#xFF09;&#xFF1A;">&#x65AD;&#x5F00;&#x4E0E;CBPeripheral&#x7684;&#x8FDE;&#x63A5;&#xFF08;&#x9700;&#x8981;&#x5728;&#x8FDE;&#x63A5;&#x5230;CBPeripheral&#x540E;&#x6301;&#x6709;&#x8BE5;&#x5BF9;&#x8C61;&#xFF09;&#xFF1A;</h4>
+<pre><code>- (void)cancelPeripheralConnection:(CBPeripheral *)peripheral;
+</code></pre><h4 id="&#x505C;&#x6B62;&#x626B;&#x63CF;">&#x505C;&#x6B62;&#x626B;&#x63CF;</h4>
+<pre><code>- (void)cancelScan;
+</code></pre><h4 id="&#x5411;characteristic&#x5199;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;ascii">&#x5411;Characteristic&#x5199;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;ASCII</h4>
+<p>&#x7531;&#x4E8E;&#x5317;&#x4E91;&#x534F;&#x8BAE;&#x4F7F;&#x7528;&#x7684;&#x662F;ASCII&#x683C;&#x5F0F;&#x6765;&#x5236;&#x5B9A;&#x534F;&#x8BAE;&#xFF0C;&#x6240;&#x4EE5;&#x6B64;&#x5904;&#x63D0;&#x4F9B;&#x76F4;&#x63A5;&#x7528;ASCII&#x683C;&#x5F0F;&#x6765;&#x5199;&#x5165;&#x7684;&#x63A5;&#x53E3;</p>
+<pre><code>- (void)writeToPeripheralWithASCIIString:(NSString *)string;
+</code></pre><h4 id="&#x5411;characteristic&#x5199;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;hex">&#x5411;Characteristic&#x5199;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;HEX</h4>
+<p>&#x5199;&#x5165;16&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x7EC4;&#x6210;&#x7684;&#x6570;&#x636E;</p>
+<pre><code>- (void)writeToPeripheralWithHEXString:(NSString *)string;
+</code></pre><h3 id="&#x4F7F;&#x7528;&#x5730;&#x5740;&#xFF0C;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x7528;&#x6237;&#x540D;&#xFF0C;&#x5BC6;&#x7801;&#xFF0C;&#x6302;&#x63A5;&#x70B9;&#x8FDB;&#x884C;cors&#x767B;&#x5F55;">&#x4F7F;&#x7528;&#x5730;&#x5740;&#xFF0C;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x7528;&#x6237;&#x540D;&#xFF0C;&#x5BC6;&#x7801;&#xFF0C;&#x6302;&#x63A5;&#x70B9;&#x8FDB;&#x884C;cors&#x767B;&#x5F55;</h3>
+<pre><code>- (void)corsLoginWithip:(NSString *)ip port:(NSString *)port user:(NSString *)user password:(NSString *)password mount:(NSString *)mount;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="blocksshe-zhi.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Blocks设置说明">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"其他接口说明","level":"2.3","depth":1,"previous":{"title":"Blocks设置说明","level":"2.2","depth":1,"path":"blocksshe-zhi.md","ref":"blocksshe-zhi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"qi-ta-jie-kou-shuo-ming.md","mtime":"2017-04-11T07:09:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-11T07:32:23.104Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
